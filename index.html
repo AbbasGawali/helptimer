@@ -87,12 +87,14 @@
 
       start.addEventListener("click", () => {
         console.log("clicked on start btn");
-        console.log(input[0].value);
+        // console.log(input[0].value);
         stopAudio.style.display = "block";
 
+        let time = input[0].value *60*1000
+        console.log(time)
         timeOut = setInterval(() => {
           audio.play();
-        }, 1200000);
+        }, time);
       });
 
       stopAudio.addEventListener("click", () => {
